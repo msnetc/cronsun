@@ -1,0 +1,40 @@
+package: cronsun
+import:
+- package: github.com/cockroachdb/cmux
+- package: github.com/coreos/etcd
+  version: ^3.2.9
+  subpackages:
+  - clientv3
+  - mvcc/mvccpb
+- package: github.com/fsnotify/fsnotify
+  version: ^1.4.2
+- package: github.com/go-gomail/gomail
+  version: ^2.0.0
+- package: github.com/gorilla/mux
+  version: ^1.5.0
+- package: github.com/rogpeppe/fastuuid
+- package: github.com/shunfei/cronsun
+  version: ^0.2.2
+  subpackages:
+  - conf
+  - db
+  - event
+  - log
+  - node
+  - node/cron
+  - utils
+  - web
+  - web/session
+- package: go.uber.org/zap
+  version: ^1.7.1
+  subpackages:
+  - zapcore
+- package: golang.org/x/net/context
+- package: gopkg.in/mgo.v2
+  subpackages:
+  - bson
+testImport:
+- package: github.com/smartystreets/goconvey
+  version: ^1.6.3
+  subpackages:
+  - convey
